@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("home"),
+        title: Text("splash"),
       ),
       body: Center(
         child: Text(
-          'home_page',
+          'splash_page',
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
         ),
       ),
