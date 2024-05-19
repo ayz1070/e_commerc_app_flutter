@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../core/theme/constant/app_icons.dart';
 import '../../routes/route_path.dart';
 
 
@@ -22,15 +23,15 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
     // go : 스택에 쌓이지 않음
     // push : 스택에 쌓임
-    Timer(Duration(seconds:2), () => context.go(RoutePath.home));
+    Timer(Duration(seconds:2), () => context.go(RoutePath.main));
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // TODO 하드코딩된 값 변경할 것
-      backgroundColor: Color(0xFF5F0080),
+
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
-        child: SvgPicture.asset('assets/svg/main_logo.svg'),
+        child: SvgPicture.asset(AppIcons.mainLogo),
       )
     );
   }
